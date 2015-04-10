@@ -1,3 +1,6 @@
+# QT Creator user file (specific to each computer)
+*.pro.user
+
 # Compiled Object files
 *.slo
 *.lo
