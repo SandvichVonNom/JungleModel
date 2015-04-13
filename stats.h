@@ -1,9 +1,10 @@
 #ifndef STATS_H
 #define STATS_H
-#define CHAMPIONCOUNT 2
 
 #include <QObject>
 #include <QString>
+#include <algorithm>
+#include <iostream>
 
 class Stats : public QObject
 {
@@ -22,8 +23,9 @@ public:
         int q_mana;
     };
 
-    void importChampions();
+    std::vector<ChampionStats> importChampions();
     void testChampions();
+    int vectorSearch(std::vector<ChampionStats> vector, QString name, int length);
 
 signals:
 

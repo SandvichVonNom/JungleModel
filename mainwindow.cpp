@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QSettings>
 #include <QDebug>
+#include <iostream>
 #include "stats.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -19,16 +20,15 @@ MainWindow::~MainWindow()
 void MainWindow::on_importButton_clicked()
 {
 
-    Stats *allChampionStats = new Stats;
-    allChampionStats->importChampions();
+    Stats *statsObj = new Stats;
+    std::vector<Stats::ChampionStats> allChampionStats = statsObj->importChampions();
+
+    qDebug() << allChampionStats.at(1).name;
 
     ui->testLine->setText("kekeke");
 
-//    Stats::ChampionStats("rawr");
-//    qDebug() << amumu.getAD();
-//    amumu.setAD();
-//    qDebug() << "6";
-//    qDebug() << amumu.getAD();
+
+
 
 //    Settings *importAll = new Settings;
 //    importAll->importChampions();
