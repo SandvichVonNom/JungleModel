@@ -3,7 +3,6 @@
 #include <iostream>
 #include "stats.h"
 #include "mainwindow.h"
-//#include "ui_mainwindow.h"
 #include <algorithm>
 
 Stats::Stats(QObject *parent) : QObject(parent)
@@ -60,21 +59,3 @@ int vectorSearch(std::vector<Stats::ChampionStats> vector, QString name, int len
             loc = i;
     return loc;
 }
-
-//struct Stats::ChampionStats
-//{
-//    int basead;
-//    double baseas;
-//    int q_dmg;
-//    double q_cd;
-//    int q_mana;
-//};
-
-//void Stats::ChampionStats()
-//{
-//    int basead;
-//    double baseas;
-//    int q_dmg;
-//    double q_cd;
-//    int q_mana;
-//}

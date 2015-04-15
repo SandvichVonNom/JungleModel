@@ -27,8 +27,19 @@ void MainWindow::on_importButton_clicked()
 
     ui->testLine->setText("kekeke");
 
+    int championCount = allChampionStats.size();
 
+    qDebug() << championCount;
 
+    for (int iii = 0; iii < championCount; iii++)
+    {
+        if (allChampionStats.at(iii).name == "ANIVIA")
+        {
+            qDebug() << "Found the mummy";
+            qDebug() << "Index is:";
+            qDebug() << iii;
+        }
+    }
 
 //    Settings *importAll = new Settings;
 //    importAll->importChampions();
