@@ -20,3 +20,6 @@ HEADERS  += mainwindow.h \
     stats.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    config.qrc

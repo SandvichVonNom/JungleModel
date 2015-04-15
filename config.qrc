@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/stats">
+        <file>champion_stats.ini</file>
+    </qresource>
+</RCC>

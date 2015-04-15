@@ -41,21 +41,6 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
 
     }
 
-    QString testqstring = "AMUMU";
-
-//    int x;
-//    x = Stats::vectorSearch(championVector, testqstring, 2);
-
     return championVector;
 
-}
-
-
-int vectorSearch(std::vector<Stats::ChampionStats> vector, QString name, int length)
-{
-    int loc = -1;
-    for (int i = 0; (i < length) && (loc != -1); i++)
-        if (vector.at(i).name == name)
-            loc = i;
-    return loc;
 }
