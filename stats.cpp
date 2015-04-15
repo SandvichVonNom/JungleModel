@@ -1,18 +1,21 @@
 #include <QSettings>
 #include <QDebug>
 #include <iostream>
-#include "stats.h"
-#include "mainwindow.h"
 #include <algorithm>
+#include "mainwindow.h"
+#include "stats.h"
+#include "ui_stats.h"
 
-Stats::Stats(QObject *parent) : QObject(parent)
+Stats::Stats(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::Stats)
 {
-
+    ui->setupUi(this);
 }
 
 Stats::~Stats()
 {
-
+    delete ui;
 }
 
 std::vector<Stats::ChampionStats> Stats::importChampions()
@@ -43,4 +46,9 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
 
     return championVector;
 
+}
+
+void Stats::on_Stats_show()
+{
+    qDebug() << "Hi?";
 }

@@ -10,6 +10,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    QFile championStatsFile("champion_stats.ini");
+    QFile::copy(":/stats/champion_stats.ini", "champion_stats.ini");
+    championStatsFile.setPermissions(QFile::WriteUser | QFile::WriteOwner | QFile::WriteGroup | QFile::WriteOther | QFile::ReadUser | QFile::ReadOwner | QFile::ReadGroup | QFile::ReadOther);
+
     ui->setupUi(this);
 }
 
@@ -20,14 +24,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_importButton_clicked()
 {
-    QFile championStatsFile("champion_stats.ini");
-    QFile::copy(":/stats/champion_stats.ini", "champion_stats.ini");
-    championStatsFile.setPermissions(QFile::WriteUser | QFile::WriteOwner | QFile::WriteGroup | QFile::WriteOther | QFile::ReadUser | QFile::ReadOwner | QFile::ReadGroup | QFile::ReadOther);
-
     Stats *statsObj = new Stats;
     std::vector<Stats::ChampionStats> allChampionStats = statsObj->importChampions();
 
-    ui->testLine->setText("kekeke");
+    ui->testLine->setText("You pressed the button");
 
     int championCount = allChampionStats.size();
 
@@ -36,6 +36,7 @@ void MainWindow::on_importButton_clicked()
 
     for (int iii = 0; iii < championCount; iii++)
     {
+        ui->testList->addItem(allChampionStats.at(iii).name);
         if (allChampionStats.at(iii).name == "AMUMU")
         {
             qDebug() << "Found the mummy";
@@ -47,5 +48,11 @@ void MainWindow::on_importButton_clicked()
 
 void MainWindow::on_testButton_clicked()
 {
-    qDebug() << ui->testLine->text();
+    qDebug() << ui->testList->currentItem()->text();
+}
+
+void MainWindow::on_menuFileEdit_triggered()
+{
+    Stats *statsEditDialog = new Stats;
+    statsEditDialog->show();
 }

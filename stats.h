@@ -1,17 +1,18 @@
 #ifndef STATS_H
 #define STATS_H
 
-#include <QObject>
-#include <QString>
-#include <algorithm>
-#include <iostream>
+#include <QDialog>
 
-class Stats : public QObject
+namespace Ui {
+class Stats;
+}
+
+class Stats : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Stats(QObject *parent = 0);
+    explicit Stats(QWidget *parent = 0);
     ~Stats();
     struct ChampionStats
     {
@@ -27,9 +28,11 @@ public:
     void testChampions();
     int vectorSearch(std::vector<ChampionStats> vector, QString name, int length);
 
-signals:
+private slots:
+    void on_Stats_show();
 
-public slots:
+private:
+    Ui::Stats *ui;
 };
 
 #endif // STATS_H

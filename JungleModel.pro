@@ -19,7 +19,8 @@ SOURCES += main.cpp\
 HEADERS  += mainwindow.h \
     stats.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    stats.ui
 
 RESOURCES += \
     config.qrc
