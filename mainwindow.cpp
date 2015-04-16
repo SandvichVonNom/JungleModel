@@ -53,6 +53,8 @@ void MainWindow::on_testButton_clicked()
 
 void MainWindow::on_menuFileEdit_triggered()
 {
-    Stats *statsEditDialog = new Stats;
+    Stats *statsEditDialog = new Stats(this);
+    QObject::connect(ui->menuFileEdit, &QAction::triggered, statsEditDialog, &Stats::on_buttonUpdateChampions_clicked);
+//    connect(statsEditDialog, SIGNAL(opened()), ui->menuFileEdit, SLOT(triggered()));
     statsEditDialog->show();
 }

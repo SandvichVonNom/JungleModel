@@ -48,7 +48,14 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
 
 }
 
-void Stats::on_Stats_show()
+//void Stats::on_Stats_show()
+//{
+//    qDebug() << "Hi?";
+//}
+
+void Stats::on_buttonUpdateChampions_clicked()
 {
-    qDebug() << "Hi?";
+    qDebug() << "Woo";
+    std::cout << "Wat";
+    ui->lineBaseAD->setText("Interesting");
 }

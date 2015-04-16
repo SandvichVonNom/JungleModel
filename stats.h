@@ -28,8 +28,12 @@ public:
     void testChampions();
     int vectorSearch(std::vector<ChampionStats> vector, QString name, int length);
 
+
+public slots:
+    void on_buttonUpdateChampions_clicked();
+
 private slots:
-    void on_Stats_show();
+//    void on_Stats_show();
 
 private:
     Ui::Stats *ui;
