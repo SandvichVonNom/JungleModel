@@ -80,3 +80,8 @@ void Stats::updateChampionList(std::vector<ChampionStats> allChampionStats)
     std::cout << "Wat";
     ui->lineBaseAD->setText("Interesting");
 }
+
+void Stats::on_listChampions_itemSelectionChanged()
+{
+    qDebug() << "Switchers";
+}
