@@ -26,7 +26,7 @@ public:
 
     std::vector<ChampionStats> importChampions();
     void testChampions();
-    int vectorSearch(std::vector<ChampionStats> vector, QString name, int length);
+    void updateChampionList(std::vector<ChampionStats>);
 
 
 public slots:

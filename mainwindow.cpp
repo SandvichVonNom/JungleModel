@@ -24,26 +24,26 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_importButton_clicked()
 {
-    Stats *statsObj = new Stats;
-    std::vector<Stats::ChampionStats> allChampionStats = statsObj->importChampions();
+//    Stats *statsObj = new Stats;
+//    std::vector<Stats::ChampionStats> allChampionStats = statsObj->importChampions();
 
-    ui->testLine->setText("You pressed the button");
+//    ui->testLine->setText("You pressed the button");
 
-    int championCount = allChampionStats.size();
+//    int championCount = allChampionStats.size();
 
-    qDebug() << "Champion count:";
-    qDebug() << championCount;
+//    qDebug() << "Champion count:";
+//    qDebug() << championCount;
 
-    for (int iii = 0; iii < championCount; iii++)
-    {
-        ui->testList->addItem(allChampionStats.at(iii).name);
-        if (allChampionStats.at(iii).name == "AMUMU")
-        {
-            qDebug() << "Found the mummy";
-            qDebug() << "Index is:";
-            qDebug() << iii;
-        }
-    }
+//    for (int iii = 0; iii < championCount; iii++)
+//    {
+//        ui->testList->addItem(allChampionStats.at(iii).name);
+//        if (allChampionStats.at(iii).name == "AMUMU")
+//        {
+//            qDebug() << "Found the mummy";
+//            qDebug() << "Index is:";
+//            qDebug() << iii;
+//        }
+//    }
 }
 
 void MainWindow::on_testButton_clicked()
@@ -54,7 +54,6 @@ void MainWindow::on_testButton_clicked()
 void MainWindow::on_menuFileEdit_triggered()
 {
     Stats *statsEditDialog = new Stats(this);
-    QObject::connect(ui->menuFileEdit, &QAction::triggered, statsEditDialog, &Stats::on_buttonUpdateChampions_clicked);
-//    connect(statsEditDialog, SIGNAL(opened()), ui->menuFileEdit, SLOT(triggered()));
+//    QObject::connect(ui->menuFileEdit, &QAction::triggered, statsEditDialog, &Stats::on_buttonUpdateChampions_clicked);  // Not very familiar with signals yet
     statsEditDialog->show();
 }

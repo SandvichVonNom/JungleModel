@@ -11,6 +11,8 @@ Stats::Stats(QWidget *parent) :
     ui(new Ui::Stats)
 {
     ui->setupUi(this);
+    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
+    updateChampionList(allChampionStats);
 }
 
 Stats::~Stats()
@@ -48,13 +50,32 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
 
 }
 
-//void Stats::on_Stats_show()
-//{
-//    qDebug() << "Hi?";
-//}
-
 void Stats::on_buttonUpdateChampions_clicked()
 {
+    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
+    updateChampionList(allChampionStats);
+}
+
+void Stats::updateChampionList(std::vector<ChampionStats> allChampionStats)
+{
+    ui->listChampions->clear();
+
+    int championCount = allChampionStats.size();
+
+    qDebug() << "Champion count:";
+    qDebug() << championCount;
+
+    for (int iii = 0; iii < championCount; iii++)
+    {
+        ui->listChampions->addItem(allChampionStats.at(iii).name);
+        if (allChampionStats.at(iii).name == "AMUMU")
+        {
+            qDebug() << "Found the mummy";
+            qDebug() << "Index is:";
+            qDebug() << iii;
+        }
+    }
+
     qDebug() << "Woo";
     std::cout << "Wat";
     ui->lineBaseAD->setText("Interesting");
