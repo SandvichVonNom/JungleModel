@@ -17,9 +17,18 @@ public:
     struct ChampionStats
     {
         QString name;
-        int basead;
-        double baseas;
-        int q_dmg;
+        int level;
+        double adbase;
+        double adlevel;
+        double aditems;
+        double adcurrent;
+
+        double asbase;
+        double aslevel;
+        double asitems;
+        double ascurrent;
+
+        double q_dmg;
         double q_cd;
         int q_mana;
     };
