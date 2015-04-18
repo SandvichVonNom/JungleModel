@@ -11,7 +11,6 @@ Stats::Stats(QWidget *parent) :
     ui(new Ui::Stats)
 {
     ui->setupUi(this);
-//    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
     updateChampionList();
 }
 
@@ -20,95 +19,102 @@ Stats::~Stats()
     delete ui;
 }
 
-std::vector<Stats::ChampionStats> Stats::importChampions()
+Stats::ChampionStats Stats::importSingleChampion(QString championName)
 {
-
     QSettings championSettings("champion_stats.ini",
                        QSettings::IniFormat);
+    Stats::ChampionStats singleChampionStats;
 
-    std::vector<Stats::ChampionStats> championVector;
+    singleChampionStats.name = championName;
+    championSettings.beginGroup(championName);
+    singleChampionStats.basead = championSettings.value("BASEAD").toInt();
+    singleChampionStats.baseas = championSettings.value("BASEAS").toDouble();
+    singleChampionStats.q_dmg = championSettings.value("Q_DMG").toInt();
+    singleChampionStats.q_cd = championSettings.value("Q_CD").toDouble();
+    singleChampionStats.q_mana = championSettings.value("Q_MANA").toInt();
+    championSettings.endGroup();
 
-    for (int iii=0; iii < championSettings.childGroups().count(); iii++)
-    {
-        Stats::ChampionStats tempStats;
-
-        tempStats.name = championSettings.childGroups()[iii];
-        championSettings.beginGroup(tempStats.name);
-        tempStats.basead = championSettings.value("BASEAD").toInt();
-        tempStats.baseas = championSettings.value("BASEAS").toDouble();
-        tempStats.q_dmg = championSettings.value("Q_DMG").toInt();
-        tempStats.q_cd = championSettings.value("Q_CD").toDouble();
-        tempStats.q_mana = championSettings.value("Q_MANA").toInt();
-        championSettings.endGroup();
-        championVector.push_back(tempStats);
-
-//        qDebug() << championVector.at(iii).name;
-
-    }
-
-    return championVector;
-
+    return singleChampionStats;
 }
 
-void Stats::on_buttonUpdateChampions_clicked()
+std::vector<Stats::ChampionStats> Stats::importAllChampions()
 {
-    updateChampionList();
+    QSettings championSettings("champion_stats.ini",
+                       QSettings::IniFormat);
+    std::vector<Stats::ChampionStats> championVector;
+    for (int iii=0; iii < championSettings.childGroups().count(); iii++)
+    {
+        Stats::ChampionStats tempStats = importSingleChampion(championSettings.childGroups()[iii]);
+        championVector.push_back(tempStats);
+        qDebug() << tempStats.name;
+    }
+    return championVector;
 }
 
 void Stats::updateChampionList()
 {
-    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
+    QSettings championSettings("champion_stats.ini",
+                       QSettings::IniFormat);
     ui->listChampions->clear();
-    int championCount = allChampionStats.size();
-    for (int iii = 0; iii < championCount; iii++)
+    for (int iii = 0; iii < championSettings.childGroups().count(); iii++)
     {
-        ui->listChampions->addItem(allChampionStats.at(iii).name);
+        ui->listChampions->addItem(championSettings.childGroups()[iii]);
+    }
+}
+
+void Stats::saveChampion()
+{
+    QSettings championSettings("champion_stats.ini",
+                       QSettings::IniFormat);
+
+    if (ui->listChampions->currentItem() != NULL)
+    {
+        QString currentChampion = ui->listChampions->currentItem()->text();
+        championSettings.beginGroup(currentChampion);
+        championSettings.setValue("BASEAD", ui->baseAD->value());
+        championSettings.setValue("BASEAS", ui->baseAS->value());
+        championSettings.setValue("Q_DMG", ui->QDmg->value());
+        championSettings.setValue("Q_CD", ui->QCD->value());
+        championSettings.setValue("Q_MANA", ui->QMana->value());
+        championSettings.endGroup();
+    }
+    else
+    {
+        qDebug() << "You need to select a champion.";
+        return;
     }
 }
 
 void Stats::on_listChampions_itemSelectionChanged()
 {
-    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
-    QString currentChampion = ui->listChampions->currentItem()->text();
+    QSettings championSettings("champion_stats.ini",
+                       QSettings::IniFormat);
 
-    int championIndex = -1;
-    int championCount = allChampionStats.size();
-    while (championIndex == -1)
+    if (ui->listChampions->currentItem() != NULL)
     {
-        for (int iii = 0; iii < championCount; iii++)
-        {
-            if (allChampionStats.at(iii).name == currentChampion)
-            {
-//                qDebug() << "Index is:";
-//                qDebug() << iii;
-                championIndex = iii;
-            }
-        }
+        QString currentChampion = ui->listChampions->currentItem()->text();
+
+        championSettings.beginGroup(currentChampion);
+        ui->baseAD->setValue(championSettings.value("BASEAD").toInt());
+        ui->baseAS->setValue(championSettings.value("BASEAS").toDouble());
+        ui->QDmg->setValue(championSettings.value("Q_DMG").toInt());
+        ui->QCD->setValue(championSettings.value("Q_CD").toDouble());
+        ui->QMana->setValue(championSettings.value("Q_MANA").toInt());
+        championSettings.endGroup();
     }
-
-
-    ui->baseAD->setValue(allChampionStats.at(championIndex).basead);
-    ui->baseAS->setValue(allChampionStats.at(championIndex).baseas);
-    ui->QDmg->setValue(allChampionStats.at(championIndex).q_dmg);
-    ui->QCD->setValue(allChampionStats.at(championIndex).q_cd);
-    ui->QMana->setValue(allChampionStats.at(championIndex).q_mana);
-
-    qDebug() << "Champion:";
-    qDebug() << currentChampion;
-    qDebug() << "Index:";
-    qDebug() << championIndex;
+    else
+    {
+        qDebug() << "You need to select a champion.";
+        return;
+    }
 }
 
 void Stats::on_buttonApply_clicked()
 {
-    QSettings championSettings("champion_stats.ini",
-                       QSettings::IniFormat);
-    QString currentChampion = ui->listChampions->currentItem()->text();
-    championSettings.beginGroup(currentChampion);
-    championSettings.setValue("BASEAD", ui->baseAD->value());
-    championSettings.setValue("BASEAS", ui->baseAS->value());
-    championSettings.setValue("Q_DMG", ui->QDmg->value());
-    championSettings.setValue("Q_CD", ui->QCD->value());
-    championSettings.setValue("Q_MANA", ui->QMana->value());
-    championSettings.endGroup();
+    saveChampion();
+}
+
+void Stats::on_Stats_accepted()
+{
+    saveChampion();
 }

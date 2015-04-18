@@ -24,20 +24,22 @@ public:
         int q_mana;
     };
 
-    std::vector<ChampionStats> importChampions();
+    std::vector<ChampionStats> importAllChampions();
     void testChampions();
     void updateChampionList();
+    void saveChampion();
+    Stats::ChampionStats importSingleChampion(QString championName);
 
 
 public slots:
-    void on_buttonUpdateChampions_clicked();
 
 private slots:
-//    void on_Stats_show();
 
     void on_listChampions_itemSelectionChanged();
 
     void on_buttonApply_clicked();
+
+    void on_Stats_accepted();
 
 private:
     Ui::Stats *ui;
