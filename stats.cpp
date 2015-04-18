@@ -11,8 +11,8 @@ Stats::Stats(QWidget *parent) :
     ui(new Ui::Stats)
 {
     ui->setupUi(this);
-    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
-    updateChampionList(allChampionStats);
+//    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
+    updateChampionList();
 }
 
 Stats::~Stats()
@@ -42,7 +42,7 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
         championSettings.endGroup();
         championVector.push_back(tempStats);
 
-        qDebug() << championVector.at(iii).name;
+//        qDebug() << championVector.at(iii).name;
 
     }
 
@@ -53,35 +53,43 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
 void Stats::on_buttonUpdateChampions_clicked()
 {
     std::vector<Stats::ChampionStats> allChampionStats = importChampions();
-    updateChampionList(allChampionStats);
+    updateChampionList();
 }
 
-void Stats::updateChampionList(std::vector<ChampionStats> allChampionStats)
+void Stats::updateChampionList()
 {
+    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
     ui->listChampions->clear();
-
     int championCount = allChampionStats.size();
-
-    qDebug() << "Champion count:";
-    qDebug() << championCount;
-
     for (int iii = 0; iii < championCount; iii++)
     {
         ui->listChampions->addItem(allChampionStats.at(iii).name);
-        if (allChampionStats.at(iii).name == "AMUMU")
-        {
-            qDebug() << "Found the mummy";
-            qDebug() << "Index is:";
-            qDebug() << iii;
-        }
     }
-
-    qDebug() << "Woo";
-    std::cout << "Wat";
     ui->lineBaseAD->setText("Interesting");
 }
 
 void Stats::on_listChampions_itemSelectionChanged()
 {
-    qDebug() << "Switchers";
+    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
+    QString currentChampion = ui->listChampions->currentItem()->text();
+
+    int championIndex = -1;
+    int championCount = allChampionStats.size();
+    while (championIndex == -1)
+    {
+        for (int iii = 0; iii < championCount; iii++)
+        {
+            if (allChampionStats.at(iii).name == currentChampion)
+            {
+//                qDebug() << "Index is:";
+//                qDebug() << iii;
+                championIndex = iii;
+            }
+        }
+    }
+
+    qDebug() << "Champion:";
+    qDebug() << currentChampion;
+    qDebug() << "Index:";
+    qDebug() << championIndex;
 }

@@ -26,7 +26,7 @@ public:
 
     std::vector<ChampionStats> importChampions();
     void testChampions();
-    void updateChampionList(std::vector<ChampionStats>);
+    void updateChampionList();
 
 
 public slots:
