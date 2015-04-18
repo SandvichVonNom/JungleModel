@@ -2,7 +2,6 @@
 #include <QDebug>
 #include <iostream>
 #include <algorithm>
-#include "mainwindow.h"
 #include "stats.h"
 #include "ui_stats.h"
 
@@ -27,9 +26,11 @@ Stats::ChampionStats Stats::importSingleChampion(QString championName)
 
     singleChampionStats.name = championName;
     championSettings.beginGroup(championName);
-    singleChampionStats.adbase = championSettings.value("BASEAD").toInt();
-    singleChampionStats.asbase = championSettings.value("BASEAS").toDouble();
-    singleChampionStats.q_dmg = championSettings.value("Q_DMG").toInt();
+    singleChampionStats.adbase = championSettings.value("ADBASE").toDouble();
+    singleChampionStats.adlevel = championSettings.value("ADLEVEL").toDouble();
+    singleChampionStats.asbase = championSettings.value("ASBASE").toDouble();
+    singleChampionStats.aslevel = championSettings.value("ASLEVEL").toDouble();
+    singleChampionStats.q_dmg = championSettings.value("Q_DMG").toDouble();
     singleChampionStats.q_cd = championSettings.value("Q_CD").toDouble();
     singleChampionStats.q_mana = championSettings.value("Q_MANA").toInt();
     championSettings.endGroup();
@@ -71,8 +72,10 @@ void Stats::saveChampion()
     {
         QString currentChampion = ui->listChampions->currentItem()->text();
         championSettings.beginGroup(currentChampion);
-        championSettings.setValue("BASEAD", ui->ADBase->value());
-        championSettings.setValue("BASEAS", ui->baseAS->value());
+        championSettings.setValue("ADBASE", ui->ADBase->value());
+        championSettings.setValue("ADLEVEL", ui->ADLevel->value());
+        championSettings.setValue("ASBASE", ui->ASBase->value());
+        championSettings.setValue("ASLEVEL", ui->ASLevel->value());
         championSettings.setValue("Q_DMG", ui->QDmg->value());
         championSettings.setValue("Q_CD", ui->QCD->value());
         championSettings.setValue("Q_MANA", ui->QMana->value());
@@ -95,9 +98,11 @@ void Stats::on_listChampions_itemSelectionChanged()
         QString currentChampion = ui->listChampions->currentItem()->text();
 
         championSettings.beginGroup(currentChampion);
-        ui->ADBase->setValue(championSettings.value("BASEAD").toInt());
-        ui->baseAS->setValue(championSettings.value("BASEAS").toDouble());
-        ui->QDmg->setValue(championSettings.value("Q_DMG").toInt());
+        ui->ADBase->setValue(championSettings.value("ADBASE").toDouble());
+        ui->ADLevel->setValue(championSettings.value("ADLEVEL").toDouble());
+        ui->ASBase->setValue(championSettings.value("ASBASE").toDouble());
+        ui->ASLevel->setValue(championSettings.value("ASLEVEL").toDouble());
+        ui->QDmg->setValue(championSettings.value("Q_DMG").toDouble());
         ui->QCD->setValue(championSettings.value("Q_CD").toDouble());
         ui->QMana->setValue(championSettings.value("Q_MANA").toInt());
         championSettings.endGroup();
@@ -112,13 +117,6 @@ void Stats::on_listChampions_itemSelectionChanged()
 void Stats::on_buttonApply_clicked()
 {
     saveChampion();
-    Stats::ChampionStats amumu = importSingleChampion("AMUMU");
-    amumu.adbase = 55;
-    amumu.level = 5;
-    qDebug() << amumu.level;
-    amumu.adlevel = 2;
-    qDebug() << amumu.adlevel;
-    qDebug() << amumu.adcurrent;
 }
 
 void Stats::on_Stats_accepted()

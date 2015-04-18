@@ -81,7 +81,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QDoubleSpinBox" name="baseAS">
+                  <widget class="QDoubleSpinBox" name="ASBase">
                    <property name="maximum">
                     <double>999.899999999999977</double>
                    </property>
@@ -172,12 +172,12 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>AD / level: </string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_6"/>
+                  <widget class="QDoubleSpinBox" name="ADLevel"/>
                  </item>
                 </layout>
                </item>
@@ -192,12 +192,12 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>AS / level: </string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_7"/>
+                  <widget class="QDoubleSpinBox" name="ASLevel"/>
                  </item>
                 </layout>
                </item>
@@ -212,7 +212,7 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Placeholder: </string>
                    </property>
                   </widget>
                  </item>
@@ -232,7 +232,7 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Placeholder: </string>
                    </property>
                   </widget>
                  </item>
@@ -252,7 +252,7 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Placeholder: </string>
                    </property>
                   </widget>
                  </item>

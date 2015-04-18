@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    stats.cpp
+    stats.cpp \
+    calc.cpp
 
 HEADERS  += mainwindow.h \
-    stats.h
+    stats.h \
+    calc.h
 
 FORMS    += mainwindow.ui \
     stats.ui

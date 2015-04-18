@@ -5,6 +5,7 @@
 #include <QDebug>
 #include <iostream>
 #include "stats.h"
+#include "calc.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -25,10 +26,15 @@ void MainWindow::on_importButton_clicked()
 {
 //    Stats *statsObj = new Stats;
 //    std::vector<Stats::ChampionStats> allChampionStats = statsObj->importChampions();
+
+    Calc *calcObj = new Calc;
+    Stats *statsObj = new Stats;
+    Stats::ChampionStats amumu = statsObj->importSingleChampion("AMUMU");
+    calcObj->updateLevel(amumu, 2);
 }
 
 void MainWindow::on_menuFileEdit_triggered()
 {
-    Stats *statsEditDialog = new Stats(this);
+    Stats *statsEditDialog = new Stats;
     statsEditDialog->show();
 }
