@@ -38,10 +38,10 @@
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
           <layout class="QGridLayout" name="gridLayout_3">
-           <item row="1" column="0">
+           <item row="0" column="0">
             <widget class="QListWidget" name="listChampions"/>
            </item>
-           <item row="1" column="1">
+           <item row="0" column="1">
             <layout class="QHBoxLayout" name="horizontalLayout_11">
              <item>
               <layout class="QVBoxLayout" name="verticalLayout">
@@ -61,7 +61,11 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineBaseAD"/>
+                  <widget class="QSpinBox" name="baseAD">
+                   <property name="maximum">
+                    <number>999</number>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -76,12 +80,16 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Base AS: </string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_2"/>
+                  <widget class="QDoubleSpinBox" name="baseAS">
+                   <property name="maximum">
+                    <double>999.899999999999977</double>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -96,12 +104,16 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Base Q Dmg:</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_3"/>
+                  <widget class="QSpinBox" name="QDmg">
+                   <property name="maximum">
+                    <number>999</number>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -116,12 +128,16 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Base Q CD: </string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_4"/>
+                  <widget class="QDoubleSpinBox" name="QCD">
+                   <property name="maximum">
+                    <double>999.899999999999977</double>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -136,12 +152,16 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Base AD: </string>
+                    <string>Base Q Mana: </string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_5"/>
+                  <widget class="QSpinBox" name="QMana">
+                   <property name="maximum">
+                    <number>999</number>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -253,14 +273,14 @@
              </item>
             </layout>
            </item>
-           <item row="0" column="0">
-            <widget class="QPushButton" name="buttonUpdateChampions">
-             <property name="text">
-              <string>Update List</string>
-             </property>
-            </widget>
-           </item>
           </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="buttonApply">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>

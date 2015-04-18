@@ -17,7 +17,6 @@ public:
 
 private slots:
     void on_importButton_clicked();
-    void on_testButton_clicked();
     void on_menuFileEdit_triggered();
 
 private:

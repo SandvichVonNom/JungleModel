@@ -37,6 +37,8 @@ private slots:
 
     void on_listChampions_itemSelectionChanged();
 
+    void on_buttonApply_clicked();
+
 private:
     Ui::Stats *ui;
 };

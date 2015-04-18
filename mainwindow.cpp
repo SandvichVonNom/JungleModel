@@ -46,11 +46,6 @@ void MainWindow::on_importButton_clicked()
 //    }
 }
 
-void MainWindow::on_testButton_clicked()
-{
-    qDebug() << ui->testList->currentItem()->text();
-}
-
 void MainWindow::on_menuFileEdit_triggered()
 {
     Stats *statsEditDialog = new Stats(this);

@@ -52,7 +52,6 @@ std::vector<Stats::ChampionStats> Stats::importChampions()
 
 void Stats::on_buttonUpdateChampions_clicked()
 {
-    std::vector<Stats::ChampionStats> allChampionStats = importChampions();
     updateChampionList();
 }
 
@@ -65,7 +64,6 @@ void Stats::updateChampionList()
     {
         ui->listChampions->addItem(allChampionStats.at(iii).name);
     }
-    ui->lineBaseAD->setText("Interesting");
 }
 
 void Stats::on_listChampions_itemSelectionChanged()
@@ -88,8 +86,29 @@ void Stats::on_listChampions_itemSelectionChanged()
         }
     }
 
+
+    ui->baseAD->setValue(allChampionStats.at(championIndex).basead);
+    ui->baseAS->setValue(allChampionStats.at(championIndex).baseas);
+    ui->QDmg->setValue(allChampionStats.at(championIndex).q_dmg);
+    ui->QCD->setValue(allChampionStats.at(championIndex).q_cd);
+    ui->QMana->setValue(allChampionStats.at(championIndex).q_mana);
+
     qDebug() << "Champion:";
     qDebug() << currentChampion;
     qDebug() << "Index:";
     qDebug() << championIndex;
+}
+
+void Stats::on_buttonApply_clicked()
+{
+    QSettings championSettings("champion_stats.ini",
+                       QSettings::IniFormat);
+    QString currentChampion = ui->listChampions->currentItem()->text();
+    championSettings.beginGroup(currentChampion);
+    championSettings.setValue("BASEAD", ui->baseAD->value());
+    championSettings.setValue("BASEAS", ui->baseAS->value());
+    championSettings.setValue("Q_DMG", ui->QDmg->value());
+    championSettings.setValue("Q_CD", ui->QCD->value());
+    championSettings.setValue("Q_MANA", ui->QMana->value());
+    championSettings.endGroup();
 }
