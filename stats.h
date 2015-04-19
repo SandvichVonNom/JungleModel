@@ -28,6 +28,33 @@ public:
         double asitems;
         double ascurrent;
 
+        double hpbase;
+        double hplevel;
+        double hpcurrent;
+
+        double hp5base;
+        double hp5level;
+        double hp5current;
+
+        double mpbase;
+        double mplevel;
+        double mpcurrent;
+
+        double mp5base;
+        double mp5level;
+        double mp5current;
+
+        double arbase;
+        double arlevel;
+        double arcurrent;
+
+        double mrbase;
+        double mrlevel;
+        double mrcurrent;
+
+        int atkrange;
+        int movespeed;
+
         double qDmg1;
         double qCd1;
         int qMana1;
