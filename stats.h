@@ -18,42 +18,42 @@ public:
     {
         QString name;
         int level;
-        double adbase;
-        double adlevel;
-        double aditems;
-        double adcurrent;
+        double adBase;
+        double adLevel;
+        double adItems;
+        double adCurrent;
 
-        double asbase;
-        double aslevel;
-        double asitems;
-        double ascurrent;
+        double asBase;
+        double asLevel;
+        double asItems;
+        double asCurrent;
 
-        double hpbase;
-        double hplevel;
-        double hpcurrent;
+        double hpBase;
+        double hpLevel;
+        double hpCurrent;
 
-        double hp5base;
-        double hp5level;
-        double hp5current;
+        double hp5Base;
+        double hp5Level;
+        double hp5Current;
 
-        double mpbase;
-        double mplevel;
-        double mpcurrent;
+        double mpBase;
+        double mpLevel;
+        double mpCurrent;
 
-        double mp5base;
-        double mp5level;
-        double mp5current;
+        double mp5Base;
+        double mp5Level;
+        double mp5Current;
 
-        double arbase;
-        double arlevel;
-        double arcurrent;
+        double arBase;
+        double arLevel;
+        double arCurrent;
 
-        double mrbase;
-        double mrlevel;
-        double mrcurrent;
+        double mrBase;
+        double mrLevel;
+        double mrCurrent;
 
-        int atkrange;
-        int movespeed;
+        int atkRange;
+        int moveSpeed;
 
         double qDmg1;
         double qCd1;

@@ -70,7 +70,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="hpBase">
+              <widget class="QDoubleSpinBox" name="hpbase">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -90,7 +90,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="hpLevel">
+              <widget class="QDoubleSpinBox" name="hplevel">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -117,7 +117,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="hp5Base">
+              <widget class="QDoubleSpinBox" name="hp5base">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -137,7 +137,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="hp5Level">
+              <widget class="QDoubleSpinBox" name="hp5level">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -164,7 +164,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="mpBase">
+              <widget class="QDoubleSpinBox" name="mpbase">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -184,7 +184,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="mpLevel">
+              <widget class="QDoubleSpinBox" name="mplevel">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -224,14 +224,14 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="mp5Base">
+              <widget class="QDoubleSpinBox" name="mp5base">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="mp5Level">
+              <widget class="QDoubleSpinBox" name="mp5level">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -258,7 +258,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="arBase">
+              <widget class="QDoubleSpinBox" name="arbase">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -278,7 +278,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="arLevel">
+              <widget class="QDoubleSpinBox" name="arlevel">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -305,7 +305,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="mrBase">
+              <widget class="QDoubleSpinBox" name="mrbase">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -325,7 +325,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="mrLevel">
+              <widget class="QDoubleSpinBox" name="mrlevel">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -352,7 +352,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="adBase">
+              <widget class="QDoubleSpinBox" name="adbase">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -372,7 +372,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="adLevel">
+              <widget class="QDoubleSpinBox" name="adlevel">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -399,7 +399,7 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="asBase">
+              <widget class="QDoubleSpinBox" name="asbase">
                <property name="maximum">
                 <double>999.899999999999977</double>
                </property>
@@ -419,7 +419,7 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="asLevel">
+              <widget class="QDoubleSpinBox" name="aslevel">
                <property name="maximum">
                 <double>999.000000000000000</double>
                </property>
@@ -456,7 +456,7 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QDoubleSpinBox" name="qDmg1">
+                  <widget class="QDoubleSpinBox" name="qdmg1">
                    <property name="maximum">
                     <double>999.990000000000009</double>
                    </property>
@@ -476,7 +476,7 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QDoubleSpinBox" name="qCd1">
+                  <widget class="QDoubleSpinBox" name="qcd1">
                    <property name="maximum">
                     <double>999.899999999999977</double>
                    </property>
@@ -496,7 +496,7 @@
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QSpinBox" name="qMana1">
+                  <widget class="QSpinBox" name="qmana1">
                    <property name="maximum">
                     <number>999</number>
                    </property>
@@ -557,7 +557,7 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QDoubleSpinBox" name="wDmg1">
+                  <widget class="QDoubleSpinBox" name="wdmg1">
                    <property name="maximum">
                     <double>999.000000000000000</double>
                    </property>
@@ -577,7 +577,7 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QDoubleSpinBox" name="wCd1">
+                  <widget class="QDoubleSpinBox" name="wcd1">
                    <property name="maximum">
                     <double>999.899999999999977</double>
                    </property>
@@ -597,7 +597,7 @@
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QSpinBox" name="wMana1">
+                  <widget class="QSpinBox" name="wmana1">
                    <property name="maximum">
                     <number>999</number>
                    </property>
@@ -658,7 +658,7 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QDoubleSpinBox" name="eDmg1">
+                  <widget class="QDoubleSpinBox" name="edmg1">
                    <property name="maximum">
                     <double>999.000000000000000</double>
                    </property>
@@ -678,7 +678,7 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QDoubleSpinBox" name="eCd1">
+                  <widget class="QDoubleSpinBox" name="ecd1">
                    <property name="maximum">
                     <double>999.899999999999977</double>
                    </property>
@@ -698,7 +698,7 @@
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QSpinBox" name="eMana1">
+                  <widget class="QSpinBox" name="emana1">
                    <property name="maximum">
                     <number>999</number>
                    </property>
