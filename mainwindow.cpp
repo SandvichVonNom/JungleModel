@@ -31,6 +31,8 @@ void MainWindow::on_importButton_clicked()
     Stats *statsObj = new Stats;
     Stats::ChampionStats amumu = statsObj->importSingleChampion("AMUMU");
     calcObj->updateLevel(amumu, 2);
+    double testdouble = 2.333;
+    qDebug() << testdouble;
 }
 
 void MainWindow::on_menuFileEdit_triggered()

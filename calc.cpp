@@ -16,7 +16,7 @@ Stats::ChampionStats Calc::updateLevel(Stats::ChampionStats championStats, int l
 {
     championStats.level = level;
     championStats.adcurrent = (championStats.adbase + (championStats.adlevel * (championStats.level - 1)));
-    championStats.ascurrent = (championStats.asbase + (championStats.aslevel * (championStats.level - 1)));
+    championStats.ascurrent = (championStats.asbase + (0.01 * (championStats.asbase * (championStats.aslevel * (championStats.level - 1)))));
     qDebug() << championStats.adcurrent;
     qDebug() << championStats.ascurrent;
 

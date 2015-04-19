@@ -30,9 +30,15 @@ Stats::ChampionStats Stats::importSingleChampion(QString championName)
     singleChampionStats.adlevel = championSettings.value("ADLEVEL").toDouble();
     singleChampionStats.asbase = championSettings.value("ASBASE").toDouble();
     singleChampionStats.aslevel = championSettings.value("ASLEVEL").toDouble();
-    singleChampionStats.q_dmg = championSettings.value("Q_DMG").toDouble();
-    singleChampionStats.q_cd = championSettings.value("Q_CD").toDouble();
-    singleChampionStats.q_mana = championSettings.value("Q_MANA").toInt();
+    singleChampionStats.qDmg1 = championSettings.value("QDMG1").toDouble();
+    singleChampionStats.qCd1 = championSettings.value("QCD1").toDouble();
+    singleChampionStats.qMana1 = championSettings.value("QMANA1").toInt();
+    singleChampionStats.wDmg1 = championSettings.value("WDMG1").toDouble();
+    singleChampionStats.wCd1 = championSettings.value("WCD1").toDouble();
+    singleChampionStats.wMana1 = championSettings.value("WMANA1").toInt();
+    singleChampionStats.eDmg1 = championSettings.value("EDMG1").toDouble();
+    singleChampionStats.eCd1 = championSettings.value("ECD1").toDouble();
+    singleChampionStats.eMana1 = championSettings.value("EMANA1").toInt();
     championSettings.endGroup();
 
     return singleChampionStats;
@@ -72,13 +78,19 @@ void Stats::saveChampion()
     {
         QString currentChampion = ui->listChampions->currentItem()->text();
         championSettings.beginGroup(currentChampion);
-        championSettings.setValue("ADBASE", ui->ADBase->value());
-        championSettings.setValue("ADLEVEL", ui->ADLevel->value());
-        championSettings.setValue("ASBASE", ui->ASBase->value());
-        championSettings.setValue("ASLEVEL", ui->ASLevel->value());
-        championSettings.setValue("Q_DMG", ui->QDmg->value());
-        championSettings.setValue("Q_CD", ui->QCD->value());
-        championSettings.setValue("Q_MANA", ui->QMana->value());
+        championSettings.setValue("ADBASE", ui->adBase->value());
+        championSettings.setValue("ADLEVEL", ui->adLevel->value());
+        championSettings.setValue("ASBASE", ui->asBase->value());
+        championSettings.setValue("ASLEVEL", ui->asLevel->value());
+        championSettings.setValue("QDMG1", ui->qDmg1->value());
+        championSettings.setValue("QCD1", ui->qCd1->value());
+        championSettings.setValue("QMANA1", ui->qMana1->value());
+        championSettings.setValue("WDMG1", ui->wDmg1->value());
+        championSettings.setValue("WCD1", ui->wCd1->value());
+        championSettings.setValue("WMANA1", ui->wMana1->value());
+        championSettings.setValue("EDMG1", ui->eDmg1->value());
+        championSettings.setValue("ECD1", ui->eCd1->value());
+        championSettings.setValue("EMANA1", ui->eMana1->value());
         championSettings.endGroup();
     }
     else
@@ -98,13 +110,19 @@ void Stats::on_listChampions_itemSelectionChanged()
         QString currentChampion = ui->listChampions->currentItem()->text();
 
         championSettings.beginGroup(currentChampion);
-        ui->ADBase->setValue(championSettings.value("ADBASE").toDouble());
-        ui->ADLevel->setValue(championSettings.value("ADLEVEL").toDouble());
-        ui->ASBase->setValue(championSettings.value("ASBASE").toDouble());
-        ui->ASLevel->setValue(championSettings.value("ASLEVEL").toDouble());
-        ui->QDmg->setValue(championSettings.value("Q_DMG").toDouble());
-        ui->QCD->setValue(championSettings.value("Q_CD").toDouble());
-        ui->QMana->setValue(championSettings.value("Q_MANA").toInt());
+        ui->adBase->setValue(championSettings.value("ADBASE").toDouble());
+        ui->adLevel->setValue(championSettings.value("ADLEVEL").toDouble());
+        ui->asBase->setValue(championSettings.value("ASBASE").toDouble());
+        ui->asLevel->setValue(championSettings.value("ASLEVEL").toDouble());
+        ui->qDmg1->setValue(championSettings.value("QDMG1").toDouble());
+        ui->qCd1->setValue(championSettings.value("QCD1").toDouble());
+        ui->qMana1->setValue(championSettings.value("QMANA1").toInt());
+        ui->wDmg1->setValue(championSettings.value("WDMG1").toDouble());
+        ui->wCd1->setValue(championSettings.value("WCD1").toDouble());
+        ui->wMana1->setValue(championSettings.value("WMANA1").toInt());
+        ui->eDmg1->setValue(championSettings.value("EDMG1").toDouble());
+        ui->eCd1->setValue(championSettings.value("ECD1").toDouble());
+        ui->eMana1->setValue(championSettings.value("EMANA1").toInt());
         championSettings.endGroup();
     }
     else

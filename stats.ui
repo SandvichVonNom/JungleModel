@@ -16,7 +16,7 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
-     <item row="2" column="0">
+     <item row="3" column="0">
       <widget class="QDialogButtonBox" name="buttonBox">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -26,7 +26,7 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QTabWidget" name="statsTabs">
        <property name="currentIndex">
         <number>0</number>
@@ -37,61 +37,118 @@
         </attribute>
         <layout class="QGridLayout" name="gridLayout_4">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="0" column="0">
-            <widget class="QListWidget" name="listChampions"/>
-           </item>
-           <item row="0" column="1">
-            <layout class="QHBoxLayout" name="horizontalLayout_11">
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout">
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout">
-                 <item>
-                  <widget class="QLabel" name="label">
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Base AD: </string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDoubleSpinBox" name="ADBase"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_2">
-                 <item>
-                  <widget class="QLabel" name="label_2">
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Base AS: </string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDoubleSpinBox" name="ASBase">
-                   <property name="maximum">
-                    <double>999.899999999999977</double>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
-                 <item>
+          <widget class="QListWidget" name="listChampions">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab">
+            <attribute name="title">
+             <string>AD</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base AD: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="adBase"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>AD / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="adLevel"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>AS</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base AS: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="asBase">
+               <property name="maximum">
+                <double>999.899999999999977</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>AS / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="asLevel"/>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_3">
+            <attribute name="title">
+             <string>Q</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="0" column="0">
+              <widget class="QTabWidget" name="tabWidget_2">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_4">
+                <attribute name="title">
+                 <string>Rank 1</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_8">
+                 <item row="0" column="0">
                   <widget class="QLabel" name="label_3">
                    <property name="font">
                     <font>
@@ -104,14 +161,14 @@
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QDoubleSpinBox" name="QDmg"/>
+                 <item row="0" column="1">
+                  <widget class="QDoubleSpinBox" name="qDmg1">
+                   <property name="maximum">
+                    <double>999.990000000000009</double>
+                   </property>
+                  </widget>
                  </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_4">
-                 <item>
+                 <item row="1" column="0">
                   <widget class="QLabel" name="label_4">
                    <property name="font">
                     <font>
@@ -124,18 +181,14 @@
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QDoubleSpinBox" name="QCD">
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="qCd1">
                    <property name="maximum">
                     <double>999.899999999999977</double>
                    </property>
                   </widget>
                  </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_5">
-                 <item>
+                 <item row="2" column="0">
                   <widget class="QLabel" name="label_5">
                    <property name="font">
                     <font>
@@ -148,62 +201,62 @@
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QSpinBox" name="QMana">
+                 <item row="2" column="1">
+                  <widget class="QSpinBox" name="qMana1">
                    <property name="maximum">
                     <number>999</number>
                    </property>
                   </widget>
                  </item>
                 </layout>
-               </item>
-              </layout>
+               </widget>
+               <widget class="QWidget" name="tab_5">
+                <attribute name="title">
+                 <string>Rank 2</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_6">
+                <attribute name="title">
+                 <string>Rank 3</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_7">
+                <attribute name="title">
+                 <string>Rank 4</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_8">
+                <attribute name="title">
+                 <string>Rank 5</string>
+                </attribute>
+               </widget>
+              </widget>
              </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_2">
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_6">
-                 <item>
-                  <widget class="QLabel" name="label_6">
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>AD / level: </string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDoubleSpinBox" name="ADLevel"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_7">
-                 <item>
-                  <widget class="QLabel" name="label_7">
-                   <property name="font">
-                    <font>
-                     <weight>75</weight>
-                     <bold>true</bold>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>AS / level: </string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QDoubleSpinBox" name="ASLevel"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_8">
-                 <item>
+            </layout>
+            <zorder>label_3</zorder>
+            <zorder>qDmg1</zorder>
+            <zorder>label_4</zorder>
+            <zorder>qCd1</zorder>
+            <zorder>label_5</zorder>
+            <zorder>qMana1</zorder>
+            <zorder>tabWidget_2</zorder>
+           </widget>
+           <widget class="QWidget" name="tab_9">
+            <attribute name="title">
+             <string>W</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="0" column="0">
+              <widget class="QTabWidget" name="tabWidget_3">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_10">
+                <attribute name="title">
+                 <string>Rank 1</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <item row="0" column="0">
                   <widget class="QLabel" name="label_8">
                    <property name="font">
                     <font>
@@ -212,18 +265,18 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Placeholder: </string>
+                    <string>Base W Dmg:</string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_8"/>
+                 <item row="0" column="1">
+                  <widget class="QDoubleSpinBox" name="wDmg1">
+                   <property name="maximum">
+                    <double>999.000000000000000</double>
+                   </property>
+                  </widget>
                  </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_9">
-                 <item>
+                 <item row="1" column="0">
                   <widget class="QLabel" name="label_9">
                    <property name="font">
                     <font>
@@ -232,18 +285,18 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Placeholder: </string>
+                    <string>Base W CD: </string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_9"/>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="wCd1">
+                   <property name="maximum">
+                    <double>999.899999999999977</double>
+                   </property>
+                  </widget>
                  </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_10">
-                 <item>
+                 <item row="2" column="0">
                   <widget class="QLabel" name="label_10">
                    <property name="font">
                     <font>
@@ -252,22 +305,147 @@
                     </font>
                    </property>
                    <property name="text">
-                    <string>Placeholder: </string>
+                    <string>Base W Mana: </string>
                    </property>
                   </widget>
                  </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_10"/>
+                 <item row="2" column="1">
+                  <widget class="QSpinBox" name="wMana1">
+                   <property name="maximum">
+                    <number>999</number>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
-               </item>
-              </layout>
+               </widget>
+               <widget class="QWidget" name="tab_11">
+                <attribute name="title">
+                 <string>Rank 2</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_12">
+                <attribute name="title">
+                 <string>Rank 3</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_13">
+                <attribute name="title">
+                 <string>Rank 4</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_14">
+                <attribute name="title">
+                 <string>Rank 5</string>
+                </attribute>
+               </widget>
+              </widget>
              </item>
             </layout>
-           </item>
-          </layout>
+           </widget>
+           <widget class="QWidget" name="tab_15">
+            <attribute name="title">
+             <string>E</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_11">
+             <item row="0" column="0">
+              <widget class="QTabWidget" name="tabWidget_4">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_16">
+                <attribute name="title">
+                 <string>Rank 1</string>
+                </attribute>
+                <layout class="QGridLayout" name="gridLayout_10">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_11">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Base E Dmg:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QDoubleSpinBox" name="eDmg1">
+                   <property name="maximum">
+                    <double>999.000000000000000</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_12">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Base E CD: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="eCd1">
+                   <property name="maximum">
+                    <double>999.899999999999977</double>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_13">
+                   <property name="font">
+                    <font>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Base E Mana: </string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QSpinBox" name="eMana1">
+                   <property name="maximum">
+                    <number>999</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_17">
+                <attribute name="title">
+                 <string>Rank 2</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_18">
+                <attribute name="title">
+                 <string>Rank 3</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_19">
+                <attribute name="title">
+                 <string>Rank 4</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_20">
+                <attribute name="title">
+                 <string>Rank 5</string>
+                </attribute>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
          </item>
-         <item row="1" column="0">
+         <item row="1" column="0" colspan="2">
           <widget class="QPushButton" name="buttonApply">
            <property name="text">
             <string>Apply</string>

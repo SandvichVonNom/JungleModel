@@ -28,9 +28,17 @@ public:
         double asitems;
         double ascurrent;
 
-        double q_dmg;
-        double q_cd;
-        int q_mana;
+        double qDmg1;
+        double qCd1;
+        int qMana1;
+
+        double wDmg1;
+        double wCd1;
+        int wMana1;
+
+        double eDmg1;
+        double eCd1;
+        int eMana1;
     };
 
     std::vector<ChampionStats> importAllChampions();
