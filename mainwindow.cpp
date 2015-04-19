@@ -1,9 +1,9 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
 #include <QSettings>
 #include <QFile>
 #include <QDebug>
 #include <iostream>
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include "stats.h"
 #include "calc.h"
 
@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QFile championStatsFile("champion_stats.ini");
     QFile::copy(":/stats/champion_stats.ini", "champion_stats.ini");
     championStatsFile.setPermissions(QFile::WriteUser | QFile::WriteOwner | QFile::WriteGroup | QFile::WriteOther | QFile::ReadUser | QFile::ReadOwner | QFile::ReadGroup | QFile::ReadOther);
+    QFile jungleStatsFile("jungle_stats.ini");
+    QFile::copy(":/stats/jungle_stats.ini", "jungle_stats.ini");
+    jungleStatsFile.setPermissions(QFile::WriteUser | QFile::WriteOwner | QFile::WriteGroup | QFile::WriteOther | QFile::ReadUser | QFile::ReadOwner | QFile::ReadGroup | QFile::ReadOther);
     ui->setupUi(this);
 }
 
@@ -30,7 +33,7 @@ void MainWindow::on_importButton_clicked()
     Calc *calcObj = new Calc;
     Stats *statsObj = new Stats;
     Stats::ChampionStats amumu = statsObj->importSingleChampion("AMUMU");
-    calcObj->updateLevel(amumu, 2);
+    calcObj->updateLevel(amumu, 18);
 }
 
 void MainWindow::on_menuFileEdit_triggered()

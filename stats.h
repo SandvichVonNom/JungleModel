@@ -68,11 +68,45 @@ public:
         int eMana1;
     };
 
+    struct JungleStats
+    {
+        QString name;
+        int level;
+        double adBase;
+        double adLevel;
+        double adItems;
+        double adCurrent;
+
+        double asBase;
+        double asLevel;
+        double asItems;
+        double asCurrent;
+
+        double hpBase;
+        double hpLevel;
+        double hpCurrent;
+
+        double arBase;
+        double arLevel;
+        double arCurrent;
+
+        double mrBase;
+        double mrLevel;
+        double mrCurrent;
+
+        int atkRange;
+        int moveSpeed;
+    };
+
     std::vector<ChampionStats> importAllChampions();
     void testChampions();
     void updateChampionList();
     void saveChampion();
     Stats::ChampionStats importSingleChampion(QString championName);
+    Stats::JungleStats importSingleJungle(QString jungleName);
+    std::vector<JungleStats> importAllJungle();
+    void updateJungleList();
+    void saveJungle();
 
 
 public slots:
@@ -81,9 +115,13 @@ private slots:
 
     void on_listChampions_itemSelectionChanged();
 
-    void on_buttonApply_clicked();
+    void on_listjungle_itemSelectionChanged();
+
+    void on_buttonapplychampions_clicked();
 
     void on_Stats_accepted();
+
+    void on_buttonapplyjungle_clicked();
 
 private:
     Ui::Stats *ui;

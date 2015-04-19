@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/stats">
         <file>champion_stats.ini</file>
+        <file>jungle_stats.ini</file>
     </qresource>
 </RCC>

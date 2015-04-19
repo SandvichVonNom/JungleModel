@@ -70,9 +70,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="hpbase">
+              <widget class="QDoubleSpinBox" name="championhpbase">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -90,9 +90,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="hplevel">
+              <widget class="QDoubleSpinBox" name="championhplevel">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -117,9 +117,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="hp5base">
+              <widget class="QDoubleSpinBox" name="championhp5base">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -137,9 +137,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="hp5level">
+              <widget class="QDoubleSpinBox" name="championhp5level">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -164,9 +164,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="mpbase">
+              <widget class="QDoubleSpinBox" name="championmpbase">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -184,9 +184,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="mplevel">
+              <widget class="QDoubleSpinBox" name="championmplevel">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -224,16 +224,16 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="mp5base">
+              <widget class="QDoubleSpinBox" name="championmp5base">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="mp5level">
+              <widget class="QDoubleSpinBox" name="championmp5level">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -258,9 +258,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="arbase">
+              <widget class="QDoubleSpinBox" name="championarbase">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -278,9 +278,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="arlevel">
+              <widget class="QDoubleSpinBox" name="championarlevel">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -305,9 +305,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="mrbase">
+              <widget class="QDoubleSpinBox" name="championmrbase">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -325,9 +325,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="mrlevel">
+              <widget class="QDoubleSpinBox" name="championmrlevel">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -352,9 +352,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="adbase">
+              <widget class="QDoubleSpinBox" name="championadbase">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -372,9 +372,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="adlevel">
+              <widget class="QDoubleSpinBox" name="championadlevel">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -399,9 +399,9 @@
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QDoubleSpinBox" name="asbase">
+              <widget class="QDoubleSpinBox" name="championasbase">
                <property name="maximum">
-                <double>999.899999999999977</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -419,9 +419,9 @@
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QDoubleSpinBox" name="aslevel">
+              <widget class="QDoubleSpinBox" name="championaslevel">
                <property name="maximum">
-                <double>999.000000000000000</double>
+                <double>9999.000000000000000</double>
                </property>
               </widget>
              </item>
@@ -456,9 +456,9 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QDoubleSpinBox" name="qdmg1">
+                  <widget class="QDoubleSpinBox" name="championqdmg1">
                    <property name="maximum">
-                    <double>999.990000000000009</double>
+                    <double>9999.000000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -476,9 +476,9 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QDoubleSpinBox" name="qcd1">
+                  <widget class="QDoubleSpinBox" name="championqcd1">
                    <property name="maximum">
-                    <double>999.899999999999977</double>
+                    <double>9999.000000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -496,9 +496,9 @@
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QSpinBox" name="qmana1">
+                  <widget class="QSpinBox" name="championqmana1">
                    <property name="maximum">
-                    <number>999</number>
+                    <number>9999</number>
                    </property>
                   </widget>
                  </item>
@@ -557,9 +557,9 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QDoubleSpinBox" name="wdmg1">
+                  <widget class="QDoubleSpinBox" name="championwdmg1">
                    <property name="maximum">
-                    <double>999.000000000000000</double>
+                    <double>9999.000000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -577,9 +577,9 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QDoubleSpinBox" name="wcd1">
+                  <widget class="QDoubleSpinBox" name="championwcd1">
                    <property name="maximum">
-                    <double>999.899999999999977</double>
+                    <double>9999.000000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -597,9 +597,9 @@
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QSpinBox" name="wmana1">
+                  <widget class="QSpinBox" name="championwmana1">
                    <property name="maximum">
-                    <number>999</number>
+                    <number>9999</number>
                    </property>
                   </widget>
                  </item>
@@ -658,9 +658,9 @@
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="QDoubleSpinBox" name="edmg1">
+                  <widget class="QDoubleSpinBox" name="championedmg1">
                    <property name="maximum">
-                    <double>999.000000000000000</double>
+                    <double>9999.000000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -678,9 +678,9 @@
                   </widget>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QDoubleSpinBox" name="ecd1">
+                  <widget class="QDoubleSpinBox" name="championecd1">
                    <property name="maximum">
-                    <double>999.899999999999977</double>
+                    <double>9999.000000000000000</double>
                    </property>
                   </widget>
                  </item>
@@ -698,9 +698,9 @@
                   </widget>
                  </item>
                  <item row="2" column="1">
-                  <widget class="QSpinBox" name="emana1">
+                  <widget class="QSpinBox" name="championemana1">
                    <property name="maximum">
-                    <number>999</number>
+                    <number>9999</number>
                    </property>
                   </widget>
                  </item>
@@ -734,75 +734,53 @@
             <attribute name="title">
              <string>Misc</string>
             </attribute>
-            <widget class="QLabel" name="label_26">
-             <property name="geometry">
-              <rect>
-               <x>9</x>
-               <y>80</y>
-               <width>225</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Attack Range:</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_27">
-             <property name="geometry">
-              <rect>
-               <x>9</x>
-               <y>210</y>
-               <width>225</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Movement Speed:</string>
-             </property>
-            </widget>
-            <widget class="QDoubleSpinBox" name="atkrange">
-             <property name="geometry">
-              <rect>
-               <x>240</x>
-               <y>80</y>
-               <width>225</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="maximum">
-              <double>999.000000000000000</double>
-             </property>
-            </widget>
-            <widget class="QDoubleSpinBox" name="movespeed">
-             <property name="geometry">
-              <rect>
-               <x>240</x>
-               <y>210</y>
-               <width>225</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="maximum">
-              <double>999.000000000000000</double>
-             </property>
-            </widget>
+            <layout class="QGridLayout" name="gridLayout_20">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_26">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Attack Range:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="championatkrange">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_27">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Movement Speed:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="championmovespeed">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </widget>
          </item>
          <item row="1" column="0" colspan="2">
-          <widget class="QPushButton" name="buttonApply">
+          <widget class="QPushButton" name="buttonapplychampions">
            <property name="text">
             <string>Apply</string>
            </property>
@@ -814,19 +792,314 @@
         <attribute name="title">
          <string>Jungle</string>
         </attribute>
-        <widget class="QPushButton" name="testButton">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>20</y>
-           <width>80</width>
-           <height>21</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>testButton</string>
-         </property>
-        </widget>
+        <layout class="QGridLayout" name="gridLayout_19">
+         <item row="0" column="1">
+          <widget class="QTabWidget" name="tabWidget_5">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab_28">
+            <attribute name="title">
+             <string>HP</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_18">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_28">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base HP: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="junglehpbase">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_29">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>HP / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="junglehplevel">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_32">
+            <attribute name="title">
+             <string>AR</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_22">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_36">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base Armor: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="junglearbase">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_37">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Armor / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="junglearlevel">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_33">
+            <attribute name="title">
+             <string>MR</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_23">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_38">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base Magic Resist: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="junglemrbase">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_39">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Magic Resist / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="junglemrlevel">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_34">
+            <attribute name="title">
+             <string>AD</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_24">
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="jungleadbase">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_41">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>AD / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_40">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base AD: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="jungleadlevel">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_35">
+            <attribute name="title">
+             <string>AS</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_25">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_42">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Base AS: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="jungleasbase">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_43">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>AS / level: </string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="jungleaslevel">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_54">
+            <attribute name="title">
+             <string>Misc</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_21">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_53">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Attack Range:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QDoubleSpinBox" name="jungleatkrange">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_54">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Movement Speed:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QDoubleSpinBox" name="junglemovespeed">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QPushButton" name="buttonapplyjungle">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QListWidget" name="listjungle">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </item>
