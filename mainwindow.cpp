@@ -33,7 +33,8 @@ void MainWindow::on_importButton_clicked()
     Calc *calcObj = new Calc;
     Stats *statsObj = new Stats;
     Stats::ChampionStats amumu = statsObj->importSingleChampion("AMUMU");
-    calcObj->updateLevel(amumu, 18);
+    Stats::JungleStats gromp =  statsObj->importSingleJungle("GROMP");
+    calcObj->fightJungle(amumu, gromp);
 }
 
 void MainWindow::on_menuFileEdit_triggered()

@@ -21,35 +21,43 @@ public:
         double adBase;
         double adLevel;
         double adItems;
+        double adTotal;
         double adCurrent;
 
         double asBase;
         double asLevel;
         double asItems;
+        double asTotal;
         double asCurrent;
 
         double hpBase;
         double hpLevel;
+        double hpTotal;
         double hpCurrent;
 
         double hp5Base;
         double hp5Level;
+        double hp5Total;
         double hp5Current;
 
         double mpBase;
         double mpLevel;
+        double mpTotal;
         double mpCurrent;
 
         double mp5Base;
         double mp5Level;
+        double mp5Total;
         double mp5Current;
 
         double arBase;
         double arLevel;
+        double arTotal;
         double arCurrent;
 
         double mrBase;
         double mrLevel;
+        double mrTotal;
         double mrCurrent;
 
         int atkRange;
@@ -75,23 +83,28 @@ public:
         double adBase;
         double adLevel;
         double adItems;
+        double adTotal;
         double adCurrent;
 
         double asBase;
         double asLevel;
         double asItems;
+        double asTotal;
         double asCurrent;
 
         double hpBase;
         double hpLevel;
+        double hpTotal;
         double hpCurrent;
 
         double arBase;
         double arLevel;
+        double arTotal;
         double arCurrent;
 
         double mrBase;
         double mrLevel;
+        double mrTotal;
         double mrCurrent;
 
         int atkRange;

@@ -11,7 +11,9 @@ public:
     explicit Calc(QObject *parent = 0);
     ~Calc();
 
-    Stats::ChampionStats updateLevel(Stats::ChampionStats championStats, int level);
+    Stats::ChampionStats championUpdateLevel(Stats::ChampionStats championStats, int level);
+    Stats::JungleStats jungleUpdateLevel(Stats::JungleStats jungleStats, int level);
+    Stats::ChampionStats fightJungle(Stats::ChampionStats championStats, Stats::JungleStats jungleStats);
 
 signals:
 
