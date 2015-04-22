@@ -57,6 +57,12 @@ Stats::ChampionStats Calc::championUpdateLevel(Stats::ChampionStats championStat
     return championStats;
 }
 
+Stats::ChampionStats Calc::initChampion(Stats::ChampionStats championStats)
+{
+    championStats = championUpdateLevel(championStats, 1);
+    return championStats;
+}
+
 Stats::JungleStats Calc::jungleUpdateLevel(Stats::JungleStats jungleStats, int level)
 {
     jungleStats.level = level;
@@ -79,10 +85,17 @@ Stats::JungleStats Calc::jungleUpdateLevel(Stats::JungleStats jungleStats, int l
     return jungleStats;
 }
 
+Stats::JungleStats Calc::initJungle(Stats::JungleStats jungleStats)
+{
+    jungleStats = jungleUpdateLevel(jungleStats, 1);
+    return jungleStats;
+}
+
 Stats::ChampionStats Calc::fightJungle(Stats::ChampionStats championStats, Stats::JungleStats jungleStats)
 {
-    championStats = championUpdateLevel(championStats, 1);
-    jungleStats = jungleUpdateLevel(jungleStats, 1);
+    championStats = initChampion(championStats);
+    jungleStats = initJungle(jungleStats);
+//    jungleStats = jungleUpdateLevel(jungleStats, 1);
 
     double time = 0.00;
     double timeAs = championStats.asCurrent;
@@ -91,15 +104,12 @@ Stats::ChampionStats Calc::fightJungle(Stats::ChampionStats championStats, Stats
 
     while ((championStats.hpCurrent > 0) && (jungleStats.hpCurrent > 0))
     {
-        qDebug() << championStats.hpCurrent;
-        qDebug() << jungleStats.hpCurrent;
-
         while (timeAs > time)
         {
             time = time + 0.05;
-            qDebug() << time;
-            qDebug() << timeAs;
         }
+        qDebug() << timeAs;
+        qDebug() << jungleStats.hpCurrent;
         jungleStats.hpCurrent = (jungleStats.hpCurrent - championStats.adCurrent);
         timeAs = timeAs + championStats.asCurrent;
     }
